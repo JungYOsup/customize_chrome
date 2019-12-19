@@ -53,7 +53,7 @@ const getAddress = event => {
 const getClock = (hour, minute, seconds, year) => {
   clock.innerText = `${
     hour >= 12 // 12 or 24 여기 조건문을 수정좀 해야겠다.
-      ? `오후${hour - 12 > 0 ? hour - 12 : `0${hour - 12}`}`
+      ? `오후${hour - 12 > 0 ? `0${hour - 12}` : `0${hour - 12}`}`
       : `오전${hour - 12 > 0 ? `0${hour}` : hour}`
   }:${minute < 10 ? `0${minute}` : minute}:${
     seconds < 10 ? `0${seconds}` : seconds
